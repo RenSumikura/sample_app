@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
 section {
@@ -73,6 +73,11 @@ p {
     color: white;
     text-decoration: none;
   }
+}
+
+header{
+  background-color:black;
+  margin-bottom: 30px;
 }
 
 /* footer */
