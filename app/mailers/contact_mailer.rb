@@ -11,5 +11,7 @@ class ContactMailer < ActionMailer::Base
     @contact = contact
 
     mail(to: @contact.email, subject: "Thank you for your contact!")
+    #mail(to: 'rsumikurasample@gmail.com', subject: "Mail has been arrived!")
+
   end
 end
