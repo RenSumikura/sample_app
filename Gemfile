@@ -22,7 +22,8 @@ gem 'will_paginate-bootstrap', '1.0.1'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
-
+gem "font-awesome-rails", "~> 3.2.1.2"
+gem 'font-awesome-sass'
 
 group :doc do
   gem 'sdoc', '0.4.1', require: false

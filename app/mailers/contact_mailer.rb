@@ -9,9 +9,16 @@ class ContactMailer < ActionMailer::Base
   def sent(contact)
 
     @contact = contact
-
     mail(to: @contact.email, subject: "Thank you for your contact!")
-    #mail(to: 'rsumikurasample@gmail.com', subject: "Mail has been arrived!")
-
+    #mail(to: "moneto03+sm@gmail.com", subject: "Mail has been derivered!")
+    #mail(to: "rsumikurasample@gmail.com", subject: "Mail has been derivered!")
+    
   end
+  
+  def received_email(contact)
+    @contact = contact
+    mail(to: "moneto03+sm@gmail.com", subject: "Mail has been derivered!")
+  end
+    
+
 end

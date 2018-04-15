@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :hoges
+
   get "contacts/new"
   devise_for :users, :controllers => {
     :registrations => "registrations"
