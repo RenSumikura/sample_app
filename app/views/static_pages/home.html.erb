@@ -1,19 +1,168 @@
 <% if signed_in? %>
+
+<a href="<%= user_path(current_user) %>">
+  <%= gravatar_for current_user, size: 52 %>
+</a>
+<h1>
+  <%= current_user.name %>
+</h1>
+<span>
+  <%= link_to "view my profile", current_user %>
+  <%= link_to "Settings", edit_user_registration_path %>
+
+  <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+</span>
+<span>
+  <%= pluralize(current_user.microposts.count, "micropost") %>
+</span>
+
+<div class="container">
+			<div class="row centered">
+				<div class="col-lg-8 col-lg-offset-2" style="margin-left:0%;">
+				
+				<div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+                   <p>自己紹介</p> 
+                </div>
+					
+				
+				</div>
+			</div><!-- row -->
+		</div>
+
+   <!-- Latest Products -->
+        <div id="products">
+            <div class="content-lg container">
+                <div class="row margin-b-40">
+                    <div class="col-sm-6">
+                        <h2>コマリゴト一覧</h2>
+                        <P>全国のコマリゴト、課題に対するユニークで鋭い提案を募集します。</P>
+                        <!--<p>関わるプロジェクトの事業者の方々を特集します。魅力溢れる事業者の方々の熱い思いに触れて下さい！</p>-->
+                    </div>
+                </div>
+                <!--// end row -->
+
+                <div class="row">
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                         <div class="spNone"> 
+                           <div class="margin-b-20">
+                           <%= image_tag("kitsuko-san.JPG" , :class => "img-responsive", :alt => "Latest Products Image") %>
+    
+                           </div>
+                        </div>
+                      
+                        <h4><a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">石巻市雄勝の漁師</a> <span class="text-uppercase margin-l-20">今野きつ子</span></h4>
+                        <p>「石巻の恵まれた漁礁で取れた海産物を、一人でも多くの食卓に並べたい。」そう語るのは石巻市雄勝町で漁師を営む
+                          今野きつ子さん。</p>
+                        <a class="link" href="#">Read More</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <div class="spNone">
+                               <%= image_tag("970x647/02.jpg" , :class => "img-responsive", :alt => "Latest Products Image") %>
+
+                            </div>  
+                        </div>
+                        <h4><a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">ピースボード石巻</a> <span class="text-uppercase margin-l-20">山脇歩子</span></h4>
+                        <p>世界一周の旅を通じて変わった世界観。一人でも多くの方の役に立つような仕事、と考えてたどり着いたのがこの仕事でした。</p>
+                        <a class="link" href="#">Read More</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                          <div class="spNone">
+                            <%= image_tag("970x647/03.jpg" , :class => "img-responsive", :alt => "Latest Products Image") %>
+                          </div>  
+                        </div>
+                        <h4><a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
+                        <a class="link" href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes">Read More</a>
+                    </div>
+                    <!-- End Latest Products -->
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Latest Products -->
+
+        <!-- Pricing -->
+        <div id="pricing">
+          
+            <div class="bg-color-sky-light">
+                <div class="content-lg container">
+                   　<h2>募集中の貢献型副業ワーク</h2>
+                                  
+                    <div class="row row-space-1">
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <!-- Pricing -->
+                            <div class="pricing">
+                                <div class="margin-b-30">
+                                    <i class="pricing-icon icon-chemistry"></i>
+                                 
+                                      <h3>環境系国際協力団体の拡大戦略推進 <span> - 月</span> 30,000円~　<span> ＜東京＞</span></h3>
+                                    <p>団体の活動を広げていく為の施策として採用されたアイディアを、実際にカタチにする推進者を募集します。</p>
+                                </div>
+                                <ul class="list-unstyled pricing-list margin-b-50">
+                                    <li class="pricing-list-item">プロジェクトの推進経験</li>
+                                    <li class="pricing-list-item">環境NGOに対する関心</li>
+                                     <li class="pricing-list-item">環境NGOに対する関心</li>
+                                </ul>
+                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                            </div>
+                            <!-- End Pricing -->
+                      </div>
+                      
+                            <div class="col-sm-4 sm-margin-b-2">
+                            <!-- Pricing -->
+                            <div class="pricing">
+                                <div class="margin-b-30">
+                                    <i class="pricing-icon icon-badge"></i>
+                                 
+                                      <h3>漁師のホームページの作成＆運営 <span> - 月</span> 30,000円~　<span> ＜東京＞</span></h3>
+                                    <p>石巻で営む漁の販売チャネルの拡大をする為、ホームページの作成から都度更新を委託します。</p>
+                                </div>
+                                <ul class="list-unstyled pricing-list margin-b-50">
+                                    <li class="pricing-list-item">ホームページ作成経験</li>
+                                    <li class="pricing-list-item">Photoshopやイラストレーターの経験もあると尚可</li>
+                                     <li class="pricing-list-item">環境NGOに対する関心</li>
+                                </ul>
+                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                            </div>
+                            <!-- End Pricing -->
+                      </div>
+                      
+                            <div class="col-sm-4 sm-margin-b-2">
+                            <!-- Pricing -->
+                            <div class="pricing">
+                                <div class="margin-b-30">
+                                    <i class="pricing-icon icon-chemistry"></i>
+                                 
+                                      <h3>宮崎県都城のシャッター街の活用 <span> - 月</span> 30,000円~　<span> ＜東京＞</span></h3>
+                                    <p>都城市牟田町。過去の賑わいを取り戻す為、商店街の再興に向けた現地＆外部サポーターを募集します。</p>
+                                </div>
+                                <ul class="list-unstyled pricing-list margin-b-50">
+                                    <li class="pricing-list-item">プロジェクトの推進経験</li>
+                                    <li class="pricing-list-item">環境NGOに対する関心</li>
+                                     <li class="pricing-list-item">環境NGOに対する関心</li>
+                                </ul>
+                                <a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Choose</a>
+                            </div>
+                            <!-- End Pricing -->
+                      </div>
+
+
+
+
 <% else %>
 
 
 <!DOCTYPE html>
-<!-- ==============================
-    Project:        Metronic "Aitonepage" Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
-    Version:        1.0
-    Author:         KeenThemes
-    Primary use:    Corporate, Business Themes.
-    Email:          support@keenthemes.com
-    Follow:         http://www.twitter.com/keenthemes
-    Like:           http://www.facebook.com/keenthemes
-    Website:        http://www.keenthemes.com
-    Premium:        Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-================================== -->
+
 <html lang="en" class="no-js">
     <!-- BEGIN HEAD -->
     <head>
@@ -26,16 +175,20 @@
 
         <!-- GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
-        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!--     <link href="simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+     <!--    <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/> --!>
+        <%= stylesheet_link_tag    "simple-line-icons.min", :media => "all" %>
+        <%= stylesheet_link_tag    "bootstrap.min", :media => "all" %>
       
         <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
-
+      <!--   <link href="css/animate.css" rel="stylesheet">
+        <link href="javascripts/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/> --!>
+        <%= stylesheet_link_tag    "animate", :media => "all" %>
+        <%= stylesheet_link_tag    "swiper.min", :media => "all" %>
+        
         <!-- THEME STYLES -->
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
-
+   <!--     <link href="css/layout.min.css" rel="stylesheet" type="text/css"/> --!>
+       <%= stylesheet_link_tag    "layout.min", :media => "all" %>
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
@@ -77,7 +230,7 @@
                                 <h2 class="carousel-title">社会貢献の<br>アイディアクラウドソーシング</h2>
                                 <p class="color-white">様々な地域のコマリゴトに対して、自分らしいユニークなアイディアを提案。採用されたアイディアを、実際にカタチに。</p>
                             </div>
-                            <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                            <a href="#about" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +245,7 @@
                 <!-- Masonry Grid -->
                 <div class="masonry-grid row">
                     <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30" style="position: absolute; left: 0%; top: 0px;width:30%;">
                         <div class="margin-b-60">
                             <h2>アイディアの募集</h2>
                             <p>地域課題に密接に関わる方々が持つ課題を、同じ目線で考えてみませんか？課題へのアイディア提供を通じて、その地域の方々が困っていることを、その地に実際に居なくとも、想像し、繋がる経験をすることが可能です。寄せられたアイディアの中から特にユニークで、困っていた人が勇気付けられた提案をして頂いた方には、その地域のちょっといいものをおすそ分けさせて頂きます。
@@ -101,12 +254,12 @@
                         </div>
                         <div class="spNone">
                           
-                           <%= link_to image_tag("500x500/hirameki.jpg", :alt => "Portfolio Image", :style=> "data-wow-duration:.3, data-wow-delay:.3s" )%>
+                           <%= image_tag("500x500/hirameki.jpg", :class => "full-width img-responsive wow fadeInUp",:alt => "Portfolio Image", :style=> "data-wow-duration:.3;, data-wow-delay:.3s;" )%>
 
                          
                         </div>
                     </div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4" style="position: absolute; left: 0%; top: 0px;width:30%;">
                         <div class="spNone">
                           <div class="margin-b-60">
                             <%= image_tag("500x500/02.jpg", :class => "full-width img-responsive wow fadeInUp", :alt => "Portfolio Image", :style=> "data-wow-duration:.3; data-wow-delay:.3s;")%>
@@ -116,7 +269,7 @@
                         <h2>アイディアの実行者募集</h2>
                         <p>アイディアの提供だけに止まらず、実際にそのアイディアをカタチにして行くことに関わって頂く方を募集します。</p>
                     </div>
-                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4" style="position: absolute; left: 0%; top: 0px;width:30%;">
                         <div class="margin-t-60 margin-b-60">
                             <h2>貢献型副業ワークの紹介</h2>
                             <p>アイディアを基にした仕事だけでなく、副業で取り組める仕事を紹介します。</p>
@@ -700,7 +853,7 @@
                                     <h3>コマリゴト事業者の募集</h3>
                                     <p class="margin-b-5">全国のコマリゴトを探し、皆様に届けます。コマリゴトは大小あれど、そのコマリゴトの背景に息づく人々の生活があります。多角的に情報収集し、より多くの方々の目に留めるコマリゴトをお伝え致します。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   
                             </div>
                         </div>
                         <div class="col-sm-4 sm-margin-b-2">
@@ -712,7 +865,7 @@
                                     <h3 class="color-white">アイディア提供者へのフィードバック</h3>
                                     <p class="color-white margin-b-5">アイディアを提供して頂いた方には、事業者からのご意見をフィードバックします。提供者は過程を通じてアイディアを振り返り、提案力を向上させます。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -724,7 +877,7 @@
                                     <h3>ちょこっとコマリゴトの解決アドバイス</h3>
                                     <p class="margin-b-5">アイディア化させるまでもない、ちょこっとしたコマリゴトは解決策を提示します。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
                         </div>
                     </div>
@@ -740,7 +893,7 @@
                                     <h3>オフラインイベントの開催</h3>
                                     <p class="margin-b-5">事業者と参加者の関係がより円滑で良好なものになるよう、オフラインイベントを定期的に開催いたします。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
                         </div>
                         <div class="col-sm-4 sm-margin-b-2">
@@ -752,7 +905,7 @@
                                     <h3>イベント開催の企画支援</h3>
                                     <p class="margin-b-5">毎年恒例のイベント。限られたメンバーだけでは企画のマンネリ化は避けられません。Idea Creatorでは、アイディアの公募だけでなく、ご要望に応じたイベントの企画支援をいたします。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -764,7 +917,7 @@
                                     <h3>クラウドファンディングとのコラボレーション</h3>
                                     <p class="margin-b-5">アイディアの規模によっては事業者だけでは予算が賄えないケースがあります。そんな時、Idea Creatorがクラウドファンディング事業者と協力し、財源の確保を調整します。</p>
                                 </div>
-                                <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" class="content-wrapper-link"></a>    
+                                <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
                         </div>
                     </div>
@@ -871,7 +1024,7 @@
             <div class="content container">
                 <div class="row">
                     <div class="col-xs-6">
-                      <%= image_tag("logo1.png" , :class => "footer-logo", :alt => "IdeaCreator Logo") %>
+                      <%= image_tag("logo1(1).png" , :class => "footer-logo", :alt => "IdeaCreator Logo") %>
                     </div>
                     <div class="col-xs-6 text-right">
                         <p class="margin-b-0"><a class="fweight-700" href="http://keenthemes.com/preview/aitonepage/">Idea Creator</a> 社会貢献のアイディアをカタチに <a class="fweight-700" href="http://www.keenthemes.com/"></a></p>
@@ -887,26 +1040,26 @@
         <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
         <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <%= javascript_include_tag "jquery.min.js" %>
-         <%= javascript_include_tag "jquery-migrate.min..js" %>
-        <%= javascript_include_tag "bootstrap.min..js" %>
+        <%= javascript_include_tag "vendor/jquery.min" %>
+         <%= javascript_include_tag "vendor/jquery-migrate.min" %>
+        <%= javascript_include_tag "vendor/bootstrap/js/bootstrap.min" %>
 
         <!-- PAGE LEVEL PLUGINS -->
-        <%= javascript_include_tag "jquery.easing..js" %>
-        <%= javascript_include_tag "jquery.back-to-top..js" %>
-        <%= javascript_include_tag "jquery.smooth-scroll..js" %>
-        <%= javascript_include_tag "jquery.wow.min..js" %>
-        <%= javascript_include_tag "swiper.jquery.min..js" %>
-        <%= javascript_include_tag "jquery.masonry.pkgd.min..js" %>
-        <%= javascript_include_tag "imagesloaded.pkgd.min..js" %>
+        <%= javascript_include_tag "vendor/jquery.easing" %>
+        <%= javascript_include_tag "vendor/jquery.back-to-top" %>
+        <%= javascript_include_tag "vendor/jquery.smooth-scroll" %>
+        <%= javascript_include_tag "vendor/jquery.wow.min" %>
+        <%= javascript_include_tag "vendor/swiper/js/swiper.jquery.min" %>
+        <%= javascript_include_tag "vendor/masonry/jquery.masonry.pkgd.min" %>
+        <%= javascript_include_tag "vendor/masonry/imagesloaded.pkgd.min" %>
         <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U" %>
 
         <!-- PAGE LEVEL SCRIPTS -->
-        <%= javascript_include_tag "ayout.min..js" %>
-        <%= javascript_include_tag "wow.min..js" %>
-        <%= javascript_include_tag "swiper.min..js" %>
-        <%= javascript_include_tag "masonry.min..js" %>
-        <%= javascript_include_tag "google-map.min..js" %> 
+        <%= javascript_include_tag "layout.min" %>
+        <%= javascript_include_tag "vendor/bootstrap/wow.min" %>
+        <%= javascript_include_tag "vendor/swiper/js/swiper.min" %>
+        <%= javascript_include_tag "vendor/bootstrap/masonry.min" %>
+        <%= javascript_include_tag "vendor/bootstrap/google-map.min" %> 
        
        <!-- CORE PLUGINS -->
   

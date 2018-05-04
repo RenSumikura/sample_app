@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.0.5'
 
@@ -24,6 +24,8 @@ gem 'mini_magick'
 gem 'fog'
 gem "font-awesome-rails", "~> 3.2.1.2"
 gem 'font-awesome-sass'
+gem 'nested_form_fields'
+
 
 group :doc do
   gem 'sdoc', '0.4.1', require: false

@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -54,7 +55,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: #AAAAAA;
 }
 
 p {
@@ -79,12 +80,13 @@ p {
     color: white;
     text-decoration: none;
   }
+  
 }
 
-/*header{
-  /*background-color:black;
+header{
+  background-color:black;
   margin-bottom: 30px;
-}*/
+}
 
 /*layout.min.cssから転記*/
 
@@ -220,11 +222,11 @@ footer {
   margin-top: 45px;
   padding-top: 50px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color: #AAAAAA;
   a {
-    color: $gray;
+    color: $gray-medium-light;
     &:hover {
-      color: $gray-darker;
+      color: #333333;
     }
   }
   small {
@@ -282,7 +284,7 @@ input {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid #AAAAAA;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -312,7 +314,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid #AAAAAA;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -344,9 +346,9 @@ aside {
   li{
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solod $gray-lighter;
+    border-top: 1px solod #AAAAAA;
     &:last-child{
-      border-bottom: 1px solid $gray-lighter;
+      border-bottom: 1px solid #AAAAAA;
     }
   }
 }
@@ -366,7 +368,7 @@ aside {
   display: block;
 }  
 .timestamp {
-  color: $gray-light;
+  color: #AAAAAA;
 }
 .gravatar {
   float: left;

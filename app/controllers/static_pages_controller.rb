@@ -6,6 +6,12 @@ class StaticPagesController < ApplicationController
     end  
   end
 
+  def edit  
+    @user = User.find(params[:id])
+    render :layout => 'users'
+  end   
+
+
   def help
   end
   
@@ -14,4 +20,7 @@ class StaticPagesController < ApplicationController
   
   def contact
   end  
+  
+
+  
 end

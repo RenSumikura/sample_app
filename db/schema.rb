@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414044440) do
+ActiveRecord::Schema.define(version: 20180428104455) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 20180414044440) do
     t.datetime "updated_at"
     t.string   "name"
     t.boolean  "admin",                  default: false
+    t.string   "position"
+    t.text     "s_introduction"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

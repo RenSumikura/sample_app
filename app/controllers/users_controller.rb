@@ -30,11 +30,20 @@ class UsersController < ApplicationController
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
+ 
+  def edit
+    @user = User.find(params[:id])
+  #  render :layout => 'users'
+  end
   
   private
     
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end  
+    
+
+
       
 end
+
