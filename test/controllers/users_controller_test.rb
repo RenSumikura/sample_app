@@ -5,5 +5,9 @@ class UsersControllerTest < ActionController::TestCase
     get :show
     assert_response :success
   end
+  
+def project_params
+    params.require(:project).permit(:title, :tasks_attributes => [:id, :name, :project_id,  :_destroy])
+end
 
 end

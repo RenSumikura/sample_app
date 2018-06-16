@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
@@ -6,7 +7,8 @@ class User < ActiveRecord::Base
                                    class_name:  "Relationship",
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
-
+  has_many :tasks
+  accepts_nested_attributes_for :tasks, allow_destroy: true
   
   validates :name, presence: true, length: {maximum: 50}
   def feed

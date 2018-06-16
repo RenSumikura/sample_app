@@ -35,6 +35,17 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   #  render :layout => 'users'
   end
+ 
+ 
+ 
+  def hotel_params
+        params.require(:hotel).permit(
+          :name, :address, :foundation, :tel,
+          roomtypes_attributes: [:id, :hotel_id, :name, :capacity, :note, :_destroy]
+        )
+  end
+ 
+ 
   
   private
     
@@ -42,7 +53,9 @@ class UsersController < ApplicationController
       redirect_to(root_path) unless current_user.admin?
     end  
     
-
+def project_params
+      params.require(:user).permit(:title, :tasks_attributes => [:id, :name, :user_id,  :_destroy])
+end
 
       
 end

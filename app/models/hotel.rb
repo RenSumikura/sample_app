@@ -10,6 +10,8 @@
 #  created_at    :datetime
 #  updated_at    :datetime
  
+
 class Hotel < ActiveRecord::Base
-    has_many :roomtypes,      dependent: :destroy
+  has_many :roomtypes,      dependent: :destroy
+  accepts_nested_attributes_for :roomtypes, allow_destroy: true # この行を追記
 end

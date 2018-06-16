@@ -11,6 +11,10 @@ class RegistrationsController < Devise::RegistrationsController
       end
       
       def account_update_params
-        params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password)
+        params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password, :position, :s_introduction)
       end  
+      
+      def project_params
+        params.require(:user).permit(:title, :tasks_attributes => [:id, :name, :project_id,  :_destroy])
+      end
 end

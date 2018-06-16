@@ -8,10 +8,9 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= nested_form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
-  <div class="profile_left">
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
 
@@ -26,7 +25,6 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-</div>
   
       <%= f.label :position %>
       <%= f.text_field :position, class: 'form-control' %>
@@ -36,13 +34,17 @@
 
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
+      
+      
     <% end %>
 
-
+      <%= f.label :image %>
+      <%= f.file_field :image %>
     
 
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
+
       <a href="http://gravatar.com/emails" target="_blank">change</a>
     </div>
   </div>

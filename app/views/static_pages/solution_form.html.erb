@@ -1,0 +1,52 @@
+ <p>ご提案（ありがとう御座います！）</p>
+ 
+
+    <p>顧客の課題点を挙げ、そのうちもっとも課題である点を根拠を含め教えてください。また、差別化できる（オリジナルな）点を教えてください。</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>1000字以内</p> 
+      </div>
+      
+
+     <%= f.label :"属性選択" %><br>
+<!--解決策の分類-->
+  <%= f.select :subject, [["空き家活用", "空き家活用"], ["遊休資産の活用", "遊休資産の活用"], ["業務効率化", "業務効率化"], ["営業力強化", "営業力強化"],["金融機関との連携", "金融機関との連携"],["MECE", "MECE"], ["ブルーオーシャン戦略", "ブルーオーシャン戦略"], ["AI", "AI"], ["プログラミング", "プログラミング"], ["お祭り", "お祭り"], ["その他", "その他"]] ,class:"form-control" %>
+<!--具体的な方法-->
+      <%= f.select :subject, [[ "業務効率化", "業務効率化"],[ "金融機関との連携", "金融機関との連携"], ["営業力強化", "営業力強化"],[ "収益性向上", "収益性向上"], ["金融機関との連携", "金融機関との連携"],["MECE", "MECE"], ["ブルーオーシャン戦略", "ブルーオーシャン戦略"], ["AI", "AI"], ["プログラミング", "プログラミング"], ["お祭り", "お祭り"], ["その他", "その他"]] ,class:"form-control" %>
+<!--提案策定に活用した考え方-->
+      <%= f.select :subject, [,["MECE", "MECE"], ["ブルーオーシャン戦略", "ブルーオーシャン戦略"], ["AI活用", "AI活用"], ["プログラミング", "プログラミング"], ["お祭り", "お祭り"],[ "産学連携", "産学連携"], ["その他", "その他"]] ,class:"form-control" %>
+<!--小分類-->
+    
+    <p>プロジェクト化した場合、実行に関わる事は可能ですか？</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>1000字以内</p> 
+      </div>
+    
+    <p>プロジェクトの費用感とその根拠（できるだけ具体的に記入下さい！）</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>1000字以内</p> 
+      </div>
+    
+     <p>コマリゴト事業者によろしければ一言！</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>200字以内</p> 
+      </div>
+      
+
+      <p><アンケート></p>
+      
+      <p>Q1. 問題解決策を作る上で心がけることとは？</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>200字以内</p> 
+      </div>
+       <p>Q2. 解決策立案のために参考にした文献があればご紹介ください！</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>200字以内</p> 
+      </div>
+
+       <p>Q.3 今回の課題との個人的な繋がり（場所や事業内容、事業者など）があれば教えて下さい。</p>
+      <div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+          <p>1000字以内</p> 
+      </div>
+
+<p>[送信]</p>
+

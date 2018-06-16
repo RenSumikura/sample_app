@@ -13,15 +13,20 @@
   <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
 </span>
 <span>
+  
+        <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
   <%= pluralize(current_user.microposts.count, "micropost") %>
 </span>
+
 
 <div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2" style="margin-left:0%;">
 				
 				<div style="padding: 10px; margin-left: 0%; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
-                   <p>自己紹介</p> 
+                   <a href="<%= current_user.s_introduction %>"></a>
                 </div>
 					
 				
@@ -863,7 +868,7 @@
                                 </div>
                                 <div class="service-info">
                                     <h3 class="color-white">アイディア提供者へのフィードバック</h3>
-                                    <p class="color-white margin-b-5">アイディアを提供して頂いた方には、事業者からのご意見をフィードバックします。提供者は過程を通じてアイディアを振り返り、提案力を向上させます。</p>
+                                    <p class="color-white margin-b-5">アイディアを提供して頂いた方には、事業者からのご意見をフィードバックします。提供者は過程を通じてアイディアを振り返り、提���力を向上させます。</p>
                                 </div>
                                 <a class="collapsed panel-title-child" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">    
                             </div>
